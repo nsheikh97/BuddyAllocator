@@ -101,7 +101,7 @@ BlockHeader* BuddyAllocator::getbuddy(BlockHeader *addr){
 
 bool BuddyAllocator::arebuddies(BlockHeader *block1, BlockHeader *block2){
 	// checks whether the two blocks are buddies are not
-	return getbuddy(block1) == block1->next || getbuddy(block2) == block2->next;
+	return getbuddy(block1) == block1->next;
 }
 
 int BuddyAllocator::listPosition(BlockHeader *b){
